@@ -14,6 +14,29 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "configuration": [
+      {
+        "id": "nf-tools-release-note-maker-vscode.ReleaseNoteMaker",
+        "title": "NF.Tools.ReleaseNoteMaker",
+        "properties": {
+          "nf-tools-release-note-maker-vscode.ReleaseNoteMaker.isEnableFeature": {
+            "type": "boolean",
+            "default": true,
+            "description": "Enable or disable"
+          },
+          "nf-tools-release-note-maker-vscode.ReleaseNoteMaker.commandToPreview": {
+            "type": "string",
+            "default": "dotnet release-note preview --name PREVIEW_NAME --version PREVIEW_VERSION",
+            "description": "Set preview command"
+          },
+          "nf-tools-release-note-maker-vscode.ReleaseNoteMaker.configFileName": {
+            "type": "string",
+            "default": "ReleaseNote.config.toml",
+            "description": "Set config filename for ReleaseNote"
+          }
+        }
+      }
+    ],
     "commands": [
       {
         "command": "nf-tools-release-note-maker-vscode.package.cmdPreview",
