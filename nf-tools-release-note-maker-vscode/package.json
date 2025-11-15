@@ -3,6 +3,11 @@
   "displayName": "nf-tools-release-note-maker-vscode",
   "description": "",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netpyoung/nf-tools-release-note-maker-vscode.git",
+    "directory": "nf-tools-release-note-maker-vscode"
+  },
   "engines": {
     "vscode": "^1.106.0"
   },
