@@ -33,7 +33,7 @@
           },
           "nf-tools-release-note-maker-vscode.ReleaseNoteMaker.commandToPreview": {
             "type": "string",
-            "default": "dotnet release-note preview --name PREVIEW_NAME --version PREVIEW_VERSION",
+            "default": "dotnet release-note preview",
             "description": "Set preview command"
           },
           "nf-tools-release-note-maker-vscode.ReleaseNoteMaker.configFileName": {
