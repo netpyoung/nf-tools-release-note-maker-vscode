@@ -1,5 +1,6 @@
 {
   "name": "nf-tools-release-note-maker-vscode",
+  "publisher": "netpyoung",
   "displayName": "nf-tools-release-note-maker-vscode",
   "description": "",
   "version": "0.0.1",
