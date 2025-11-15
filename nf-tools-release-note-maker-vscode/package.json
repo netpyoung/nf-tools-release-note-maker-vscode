@@ -1,6 +1,7 @@
 {
   "name": "nf-tools-release-note-maker-vscode",
   "publisher": "netpyoung",
+  "keywords": ["release-note", "releasenote", "changelog", "towncrier"],
   "displayName": "nf-tools-release-note-maker-vscode",
   "description": "",
   "version": "0.0.1",
@@ -16,7 +17,7 @@
     "Other"
   ],
   "activationEvents": [
-    "workspaceContains:**/ReleaseNote.config.toml"
+    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
   "contributes": {
