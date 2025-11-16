@@ -39,7 +39,7 @@ export async function Command_Create() {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Issue Fragment Form</title>
+  <title>Create Fragment</title>
   <style>
     :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial;}
     body{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#f6f8fa;margin:0;padding:24px}
@@ -61,7 +61,7 @@ export async function Command_Create() {
   <main class="card" role="main">
     <h1>Create Fragment</h1>
 
-    <form id="issueForm" novalidate>
+    <form id="formCreate" novalidate>
       <div>
         <label for="selectFragmentType">Fragment Type</label>
         <select id="selectFragmentType" name="selectFragmentType" required aria-required="true">
@@ -92,7 +92,7 @@ export async function Command_Create() {
   <script>
     const vscode = acquireVsCodeApi();
     
-    const form = document.getElementById('issueForm');
+    const form = document.getElementById('formCreate');
     
     const selectFragmentType = document.getElementById('selectFragmentType');
     const inputIssueName = document.getElementById('inputIssueName');
@@ -142,7 +142,7 @@ export async function Command_Create() {
       // Build payload
       const payload = {
         fragmentName: inputIssueName.value.trim(),
-        selectFragmentType: typeValue,
+        fragmentType: typeValue,
         fragmentContent: inputFragmentContent.value.trim(),
       };
 
@@ -172,16 +172,21 @@ export async function Command_Create() {
   panel.webview.onDidReceiveMessage(msg => { OnMessage(panel, msg); });
 }
 
+class OptCreate {
+  fragmentContent: string = '';
+  fragmentName: string = '';
+  fragmentType: string = '';
+}
+
 function isEmpty(str: string | undefined | null): boolean {
   return !str || str.trim() === "";
 }
 
-async function OnMessage(panel: vscode.WebviewPanel, msg: any) {
+async function OnMessage(panel: vscode.WebviewPanel, msg: OptCreate) {
   if (_isCreating) {
-    panel.webview.postMessage({ message: 'Creating' });
+    panel.webview.postMessage({ message: 'Creating ...' });
     return;
   }
-
 
   try {
     _isCreating = true;
