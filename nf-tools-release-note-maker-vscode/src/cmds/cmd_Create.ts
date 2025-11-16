@@ -63,25 +63,25 @@ export async function Command_Create() {
 
     <form id="issueForm" novalidate>
       <div>
-        <label for="fragmentType">Fragment Type</label>
-        <select id="fragmentType" name="fragmentType" required aria-required="true">
+        <label for="selectFragmentType">Fragment Type</label>
+        <select id="selectFragmentType" name="selectFragmentType" required aria-required="true">
           <option value="" disabled selected>Select a type</option>
         </select>
       </div>
       
       <div>
-        <label for="issueName">Fragment Name</label>
-        <input id="issueName" name="issueName" type="text" placeholder="+ / +hello / 123 / baz.1.2" required maxlength="120" />
+        <label for="inputIssueName">Fragment Name</label>
+        <input id="inputIssueName" name="inputIssueName" type="text" placeholder="+ / +hello / 123 / baz.1.2" required maxlength="120" />
         <small id="nameError" class="error" aria-live="polite" style="display:none"></small>
       </div>
 
      <div>
-        <label for="issueName">Fragment Content</label>
-        <input id="inputFragmentContent" name="issueName" type="text" placeholder="Enter fragment content" required maxlength="120" style="height: 60px; padding: 8px;"/>
+        <label for="inputFragmentContent">Fragment Content</label>
+        <input id="inputFragmentContent" name="inputFragmentContent" type="text" placeholder="Enter fragment content" required maxlength="120" style="height: 60px; padding: 8px;"/>
         <small id="nameError" class="error" aria-live="polite" style="display:none"></small>
       </div>
       <div class="actions">
-        <button type="button" id="resetBtn">Reset</button>
+        <button type="button" id="btnReset">Reset</button>
         <button type="submit">Submit</button>
       </div>
     </form>
@@ -91,26 +91,25 @@ export async function Command_Create() {
 
   <script>
     const vscode = acquireVsCodeApi();
-
-    const types = ${typesJson};
-
-    const select = document.getElementById("fragmentType");
-    types.forEach(t => {
-      const opt = new Option(t, t);
-      select.add(opt);
-    });
-
+    
     const form = document.getElementById('issueForm');
-    const nameInput = document.getElementById('issueName');
-    const typeSelect = document.getElementById('fragmentType');
+    
+    const selectFragmentType = document.getElementById('selectFragmentType');
+    const inputIssueName = document.getElementById('inputIssueName');
+    const inputFragmentContent = document.getElementById('inputFragmentContent');
+    
     const result = document.getElementById('result');
     const nameError = document.getElementById('nameError');
-    const resetBtn = document.getElementById('resetBtn');
-
-    const inputFragmentContent = document.getElementById('inputFragmentContent');
+    const btnReset = document.getElementById('btnReset');
+    
+    const types = ${typesJson};
+    types.forEach(t => {
+      const opt = new Option(t, t);
+      selectFragmentType.add(opt);
+    });
 
     function validateName() {
-      const value = nameInput.value.trim();
+      const value = inputIssueName.value.trim();
       if (!value) {
         nameError.textContent = 'Issue Name is required.';
         nameError.style.display = 'inline';
@@ -126,12 +125,12 @@ export async function Command_Create() {
       return true;
     }
 
-    nameInput.addEventListener('input', validateName);
+    inputIssueName.addEventListener('input', validateName);
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const isNameOk = validateName();
-      const typeValue = typeSelect.value;
+      const typeValue = selectFragmentType.value;
       if (!isNameOk) return;
       if (!typeValue) {
         result.hidden = false;
@@ -142,8 +141,8 @@ export async function Command_Create() {
 
       // Build payload
       const payload = {
-        fragmentName: nameInput.value.trim(),
-        fragmentType: typeValue,
+        fragmentName: inputIssueName.value.trim(),
+        selectFragmentType: typeValue,
         fragmentContent: inputFragmentContent.value.trim(),
       };
 
@@ -155,7 +154,7 @@ export async function Command_Create() {
       vscode.postMessage(payload);
     });
 
-    resetBtn.addEventListener('click', () => {
+    btnReset.addEventListener('click', () => {
       form.reset();
       result.hidden = true;
       nameError.style.display = 'none';
