@@ -8,6 +8,10 @@ import * as path from 'path';
 export async function activate(context: vscode.ExtensionContext) {
 	const cmdPreview = vscode.commands.registerCommand('nf-tools-release-note-maker-vscode.package.cmdPreview', cmds.Command_Preview);
 	context.subscriptions.push(cmdPreview);
+
+	const cmdCreate = vscode.commands.registerCommand('nf-tools-release-note-maker-vscode.package.cmdCreate', cmds.Command_Create);
+	context.subscriptions.push(cmdCreate);
+
 	await updateContext();
 }
 

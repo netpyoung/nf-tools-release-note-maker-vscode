@@ -1,7 +1,12 @@
 {
   "name": "nf-tools-release-note-maker-vscode",
   "publisher": "netpyoung",
-  "keywords": ["release-note", "releasenote", "changelog", "towncrier"],
+  "keywords": [
+    "release-note",
+    "releasenote",
+    "changelog",
+    "towncrier"
+  ],
   "displayName": "nf-tools-release-note-maker-vscode",
   "description": "",
   "version": "0.0.1",
@@ -48,6 +53,10 @@
       {
         "command": "nf-tools-release-note-maker-vscode.package.cmdPreview",
         "title": "Preview"
+      },
+      {
+        "command": "nf-tools-release-note-maker-vscode.package.cmdCreate",
+        "title": "Create"
       }
     ],
     "submenus": [
@@ -73,7 +82,12 @@
       ],
       "nf-tools-release-note-maker-vscode.package.submenu": [
         {
-          "command": "nf-tools-release-note-maker-vscode.package.cmdPreview"
+          "command": "nf-tools-release-note-maker-vscode.package.cmdPreview",
+          "group": "group@1"
+        },
+        {
+          "command": "nf-tools-release-note-maker-vscode.package.cmdCreate",
+          "group": "group@2"
         }
       ]
     }
