@@ -8,7 +8,11 @@
 
 VSCode extension for [NF.Tools.ReleaseNoteMaker](https://netpyoung.github.io/NF.Tool.ReleaseNoteMaker/)
 
+![./images/Create.png](./images/Create.png)
+
 ![./images/Preview.png](./images/Preview.png)
+
+![./images/Build.png](./images/Build.png)
 
 ## Requirements
 
