@@ -12,6 +12,9 @@ export async function activate(context: vscode.ExtensionContext) {
 	const cmdCreate = vscode.commands.registerCommand('nf-tools-release-note-maker-vscode.package.cmdCreate', cmds.Command_Create);
 	context.subscriptions.push(cmdCreate);
 
+	const cmdBuild = vscode.commands.registerCommand('nf-tools-release-note-maker-vscode.package.cmdBuild', cmds.Command_Build);
+	context.subscriptions.push(cmdBuild);
+
 	await updateContext();
 }
 

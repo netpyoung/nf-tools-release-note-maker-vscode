@@ -57,6 +57,10 @@
       {
         "command": "nf-tools-release-note-maker-vscode.package.cmdCreate",
         "title": "Create"
+      },
+      {
+        "command": "nf-tools-release-note-maker-vscode.package.cmdBuild",
+        "title": "Build"
       }
     ],
     "submenus": [
@@ -88,6 +92,10 @@
         {
           "command": "nf-tools-release-note-maker-vscode.package.cmdCreate",
           "group": "group@2"
+        },
+        {
+          "command": "nf-tools-release-note-maker-vscode.package.cmdBuild",
+          "group": "group@3"
         }
       ]
     }
