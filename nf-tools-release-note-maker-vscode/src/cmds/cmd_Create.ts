@@ -187,7 +187,7 @@ async function OnMessage(panel: vscode.WebviewPanel, msg: any) {
     _isCreating = true;
 
     const rootFolder = utils.getOpenedRootFolder();
-    if (rootFolder) {
+    if (!rootFolder) {
       panel.webview.postMessage({ message: 'Fail: Fail to find root folder' });
       return;
     }
@@ -197,7 +197,7 @@ async function OnMessage(panel: vscode.WebviewPanel, msg: any) {
       content = 'Add your info here';
     }
 
-    const cmd = `dotnet release-note create --config ${setting.setting.configFileName} --content ${content} ${msg.fragmentName}.${msg.fragmentType}.md`;
+    const cmd = `dotnet release-note create --config ${setting.setting.configFileName} --content "${content}" ${msg.fragmentName}.${msg.fragmentType}.md`;
     const result = await utils.runCommand(cmd, rootFolder);
     if (!result.success) {
       panel.webview.postMessage({ message: result.stdout });
