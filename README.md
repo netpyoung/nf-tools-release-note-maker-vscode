@@ -6,7 +6,7 @@
 
 [![Version](https://img.shields.io/visual-studio-marketplace/v/netpyoung.nf-tool-release-note-maker-vscode?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=netpyoung.nf-tool-release-note-maker-vscode) [![Installs](https://img.shields.io/visual-studio-marketplace/i/netpyoung.nf-tool-release-note-maker-vscode?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=netpyoung.nf-tool-release-note-maker-vscode)
 
-VSCode extension for [NF.Tools.ReleaseNoteMaker](https://netpyoung.github.io/NF.Tool.ReleaseNoteMaker/)
+VSCode extension for [NF.Tool.ReleaseNoteMaker](https://netpyoung.github.io/NF.Tool.ReleaseNoteMaker/)
 
 ![./images/Create.png](./images/Create.png)
 

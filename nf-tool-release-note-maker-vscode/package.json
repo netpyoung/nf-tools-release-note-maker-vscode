@@ -29,7 +29,7 @@
     "configuration": [
       {
         "id": "nf-tool-release-note-maker-vscode.ReleaseNoteMaker",
-        "title": "NF.Tools.ReleaseNoteMaker",
+        "title": "NF.Tool.ReleaseNoteMaker",
         "properties": {
           "nf-tool-release-note-maker-vscode.ReleaseNoteMaker.isEnableFeature": {
             "type": "boolean",
