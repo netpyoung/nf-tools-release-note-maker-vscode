@@ -1,10 +1,10 @@
-# nf-tools-release-note-maker-vscode
+# nf-tool-release-note-maker-vscode
 
-[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/netpyoung/nf-tools-release-note-maker-vscode)
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/netpyoung/nf-tool-release-note-maker-vscode)
 [![Document](https://img.shields.io/badge/document-docfx-blue)](https://netpyoung.github.io/NF.Tool.ReleaseNoteMaker/)
-[![License](https://img.shields.io/badge/license-MIT-C06524)](https://github.com/netpyoung/nf-tools-release-note-maker-vscode/blob/main/LICENSE.md)
+[![License](https://img.shields.io/badge/license-MIT-C06524)](https://github.com/netpyoung/nf-tool-release-note-maker-vscode/blob/main/LICENSE.md)
 
-[![Version](https://img.shields.io/visual-studio-marketplace/v/netpyoung.nf-tools-release-note-maker-vscode?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=netpyoung.nf-tools-release-note-maker-vscode) [![Installs](https://img.shields.io/visual-studio-marketplace/i/netpyoung.nf-tools-release-note-maker-vscode?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=netpyoung.nf-tools-release-note-maker-vscode)
+[![Version](https://img.shields.io/visual-studio-marketplace/v/netpyoung.nf-tool-release-note-maker-vscode?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=netpyoung.nf-tool-release-note-maker-vscode) [![Installs](https://img.shields.io/visual-studio-marketplace/i/netpyoung.nf-tool-release-note-maker-vscode?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=netpyoung.nf-tool-release-note-maker-vscode)
 
 VSCode extension for [NF.Tools.ReleaseNoteMaker](https://netpyoung.github.io/NF.Tool.ReleaseNoteMaker/)
 

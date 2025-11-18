@@ -17,7 +17,7 @@
                 "isDefault": true
             },
             "options": {
-                "cwd": "nf-tools-release-note-maker-vscode"
+                "cwd": "nf-tool-release-note-maker-vscode"
             },
         },
         {
@@ -32,7 +32,7 @@
                 "reveal": "never"
             },
             "options": {
-                "cwd": "nf-tools-release-note-maker-vscode"
+                "cwd": "nf-tool-release-note-maker-vscode"
             },
         },
         {
@@ -47,7 +47,7 @@
                 "reveal": "never"
             },
             "options": {
-                "cwd": "nf-tools-release-note-maker-vscode"
+                "cwd": "nf-tool-release-note-maker-vscode"
             },
         },
         {
@@ -61,7 +61,7 @@
             },
             "group": "build",
             "options": {
-                "cwd": "nf-tools-release-note-maker-vscode"
+                "cwd": "nf-tool-release-note-maker-vscode"
             },
         },
         {
@@ -72,7 +72,7 @@
             ],
             "problemMatcher": [],
             "options": {
-                "cwd": "nf-tools-release-note-maker-vscode"
+                "cwd": "nf-tool-release-note-maker-vscode"
             },
         }
     ]

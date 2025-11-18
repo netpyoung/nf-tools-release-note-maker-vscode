@@ -1,5 +1,5 @@
 {
-  "name": "nf-tools-release-note-maker-vscode",
+  "name": "nf-tool-release-note-maker-vscode",
   "publisher": "netpyoung",
   "keywords": [
     "release-note",
@@ -7,13 +7,13 @@
     "changelog",
     "towncrier"
   ],
-  "displayName": "nf-tools-release-note-maker-vscode",
+  "displayName": "nf-tool-release-note-maker-vscode",
   "description": "",
   "version": "0.0.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/netpyoung/nf-tools-release-note-maker-vscode.git",
-    "directory": "nf-tools-release-note-maker-vscode"
+    "url": "https://github.com/netpyoung/nf-tool-release-note-maker-vscode.git",
+    "directory": "nf-tool-release-note-maker-vscode"
   },
   "engines": {
     "vscode": "^1.106.0"
@@ -28,20 +28,20 @@
   "contributes": {
     "configuration": [
       {
-        "id": "nf-tools-release-note-maker-vscode.ReleaseNoteMaker",
+        "id": "nf-tool-release-note-maker-vscode.ReleaseNoteMaker",
         "title": "NF.Tools.ReleaseNoteMaker",
         "properties": {
-          "nf-tools-release-note-maker-vscode.ReleaseNoteMaker.isEnableFeature": {
+          "nf-tool-release-note-maker-vscode.ReleaseNoteMaker.isEnableFeature": {
             "type": "boolean",
             "default": true,
             "description": "Enable or disable"
           },
-          "nf-tools-release-note-maker-vscode.ReleaseNoteMaker.commandToPreview": {
+          "nf-tool-release-note-maker-vscode.ReleaseNoteMaker.commandToPreview": {
             "type": "string",
             "default": "dotnet release-note preview",
             "description": "Set preview command"
           },
-          "nf-tools-release-note-maker-vscode.ReleaseNoteMaker.configFileName": {
+          "nf-tool-release-note-maker-vscode.ReleaseNoteMaker.configFileName": {
             "type": "string",
             "default": "ReleaseNote.config.toml",
             "description": "Set config filename for ReleaseNote"
@@ -51,50 +51,50 @@
     ],
     "commands": [
       {
-        "command": "nf-tools-release-note-maker-vscode.package.cmdPreview",
+        "command": "nf-tool-release-note-maker-vscode.package.cmdPreview",
         "title": "Preview"
       },
       {
-        "command": "nf-tools-release-note-maker-vscode.package.cmdCreate",
+        "command": "nf-tool-release-note-maker-vscode.package.cmdCreate",
         "title": "Create"
       },
       {
-        "command": "nf-tools-release-note-maker-vscode.package.cmdBuild",
+        "command": "nf-tool-release-note-maker-vscode.package.cmdBuild",
         "title": "Build"
       }
     ],
     "submenus": [
       {
-        "id": "nf-tools-release-note-maker-vscode.package.submenu",
+        "id": "nf-tool-release-note-maker-vscode.package.submenu",
         "label": "🌶️ReleaseNoteMaker"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "submenu": "nf-tools-release-note-maker-vscode.package.submenu",
-          "when": "nf-tools-release-note-maker-vscode.package.isConfigFileExist",
+          "submenu": "nf-tool-release-note-maker-vscode.package.submenu",
+          "when": "nf-tool-release-note-maker-vscode.package.isConfigFileExist",
           "group": "navigation"
         }
       ],
       "editor/context": [
         {
-          "submenu": "nf-tools-release-note-maker-vscode.package.submenu",
-          "when": "nf-tools-release-note-maker-vscode.package.isConfigFileExist",
+          "submenu": "nf-tool-release-note-maker-vscode.package.submenu",
+          "when": "nf-tool-release-note-maker-vscode.package.isConfigFileExist",
           "group": "navigation"
         }
       ],
-      "nf-tools-release-note-maker-vscode.package.submenu": [
+      "nf-tool-release-note-maker-vscode.package.submenu": [
         {
-          "command": "nf-tools-release-note-maker-vscode.package.cmdPreview",
+          "command": "nf-tool-release-note-maker-vscode.package.cmdPreview",
           "group": "group@1"
         },
         {
-          "command": "nf-tools-release-note-maker-vscode.package.cmdCreate",
+          "command": "nf-tool-release-note-maker-vscode.package.cmdCreate",
           "group": "group@2"
         },
         {
-          "command": "nf-tools-release-note-maker-vscode.package.cmdBuild",
+          "command": "nf-tool-release-note-maker-vscode.package.cmdBuild",
           "group": "group@3"
         }
       ]

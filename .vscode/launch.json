@@ -13,7 +13,7 @@
 				"--extensionDevelopmentPath=${workspaceFolder}"
 			],
 			"outFiles": [
-				"${workspaceFolder}/nf-tools-release-note-maker-vscode/dist/**/*.js"
+				"${workspaceFolder}/nf-tool-release-note-maker-vscode/dist/**/*.js"
 			],
 			"preLaunchTask": "${defaultBuildTask}"
 		}
