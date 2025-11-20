@@ -61,11 +61,19 @@
       {
         "command": "nf-tool-release-note-maker-vscode.package.cmdBuild",
         "title": "Build"
+      },
+      {
+        "command": "nf-tool-release-note-maker-vscode.package.cmdInit",
+        "title": "Init"
       }
     ],
     "submenus": [
       {
         "id": "nf-tool-release-note-maker-vscode.package.submenu",
+        "label": "🌶️ReleaseNoteMaker"
+      },
+      {
+        "id": "nf-tool-release-note-maker-vscode.package.submenu-for-init",
         "label": "🌶️ReleaseNoteMaker"
       }
     ],
@@ -75,12 +83,22 @@
           "submenu": "nf-tool-release-note-maker-vscode.package.submenu",
           "when": "nf-tool-release-note-maker-vscode.package.isConfigFileExist",
           "group": "navigation"
+        },
+        {
+          "submenu": "nf-tool-release-note-maker-vscode.package.submenu-for-init",
+          "when": "!nf-tool-release-note-maker-vscode.package.isConfigFileExist",
+          "group": "navigation"
         }
       ],
       "editor/context": [
         {
           "submenu": "nf-tool-release-note-maker-vscode.package.submenu",
           "when": "nf-tool-release-note-maker-vscode.package.isConfigFileExist",
+          "group": "navigation"
+        },
+        {
+          "submenu": "nf-tool-release-note-maker-vscode.package.submenu-for-init",
+          "when": "!nf-tool-release-note-maker-vscode.package.isConfigFileExist",
           "group": "navigation"
         }
       ],
@@ -96,6 +114,12 @@
         {
           "command": "nf-tool-release-note-maker-vscode.package.cmdBuild",
           "group": "group@3"
+        }
+      ],
+      "nf-tool-release-note-maker-vscode.package.submenu-for-init": [
+        {
+          "command": "nf-tool-release-note-maker-vscode.package.cmdInit",
+          "group": "group@1"
         }
       ]
     }
