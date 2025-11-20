@@ -19,6 +19,9 @@ export async function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(cmdInit);
 
 	await updateContext();
+
+	const watcher = createFilWatcher();
+	context.subscriptions.push(watcher);
 }
 
 export function isConfigFileExist(): boolean {
@@ -33,4 +36,17 @@ export function isConfigFileExist(): boolean {
 
 async function updateContext() {
 	await vscode.commands.executeCommand('setContext', 'nf-tool-release-note-maker-vscode.package.isConfigFileExist', isConfigFileExist());
+}
+
+function createFilWatcher() {
+	const watcher = vscode.workspace.createFileSystemWatcher(
+		new vscode.RelativePattern(vscode.workspace.workspaceFolders![0], setting.setting.configFileName)
+	);
+	watcher.onDidCreate(async uri => {
+		await updateContext();
+	});
+	watcher.onDidDelete(async uri => {
+		await updateContext();
+	});
+	return watcher;
 }
